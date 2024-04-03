@@ -1,4 +1,3 @@
-# Função para exibir o menu
 def exibir_menu():
     menu = """
 ╔═════════════════════════════════════╗
@@ -13,7 +12,6 @@ def exibir_menu():
 """
     print(menu)
 
-# Função para buscar candidatos com base nos critérios digitados pelo usuário
 def buscar_candidato_por_critérios(candidatos, nota_e, nota_t, nota_p, nota_s):
     candidatos_encontrados = []
     for candidato in candidatos:
@@ -24,7 +22,6 @@ def buscar_candidato_por_critérios(candidatos, nota_e, nota_t, nota_p, nota_s):
             candidatos_encontrados.append(candidato_com_pontuacao)
     return candidatos_encontrados
 
-# Lista de candidatos e seus resultados
 candidatos = [
     {"nome": "João", "resultado": "e5_t10_p8_s8"},
     {"nome": "Maria", "resultado": "e10_t7_p7_s8"},
@@ -33,14 +30,12 @@ candidatos = [
     {"nome": "Carlos", "resultado": "e10_t10_p8_s9"}
 ]
 
-# Função para adicionar um novo funcionário
 def adicionar_funcionario():
     nome = input("Digite o nome do novo funcionário: ")
     resultado = input("Digite o resultado do novo funcionário no formato 'ex_tx_px_sx': ")
     candidatos.append({"nome": nome, "resultado": resultado})
     print(f"Funcionário {nome} adicionado com sucesso!")
 
-# Função para excluir um funcionário
 def excluir_funcionario():
     nome = input("Digite o nome do funcionário que deseja excluir: ")
     for candidato in candidatos:
@@ -50,7 +45,6 @@ def excluir_funcionario():
             return
     print(f"Funcionário {nome} não encontrado.")
 
-# Exemplo de utilização
 while True:
     exibir_menu()
     opcao = input("Digite o número da opção desejada: ")
